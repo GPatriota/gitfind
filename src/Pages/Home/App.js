@@ -13,7 +13,7 @@ function App() {//teste
     const userData = await fetch(`https://api.github.com/users/${user}`);
     const newUser = await userData.json();
 
-    if (newUser.name) {
+    if (newUser.login) {
       const { avatar_url, name, bio, login } = newUser;
       setCurrentUser({ avatar_url, name, bio, login });
 
@@ -41,7 +41,7 @@ function App() {//teste
             />
             <button onClick={handleGetData}>Buscar</button>
           </div>
-          {currentUser?.name ? (<>
+          {currentUser?.login ? (<>
             <div className="profile">
             <img
               src={currentUser.avatar_url}
@@ -49,8 +49,7 @@ function App() {//teste
               className="profileimg"
             />
             <div>
-              <h3>{currentUser.name}</h3>
-              <span>{currentUser.login}</span>
+              <h3>{currentUser.login}</h3>
               <p>{currentUser.bio}</p>
             </div>
           </div>
