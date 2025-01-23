@@ -11,14 +11,14 @@ function App() {//teste
 
   const handleGetData = async () => {
     const userData = await fetch(`https://api.github.com/users/${user}`);
-    const newUser = await userData.json;
+    const newUser = await userData.json();
 
     if (newUser.name) {
       const { avatar_url, name, bio, login } = newUser;
       setCurrentUser({ avatar_url, name, bio, login });
 
       const reposData = await fetch(`https://api.github.com/users/${user}/repos`);
-      const newRepos = await reposData.json;
+      const newRepos = await reposData.json();
       console.log(repos);
       if(newRepos.length){
         setRepos(newRepos);
