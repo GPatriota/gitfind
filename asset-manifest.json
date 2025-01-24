@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/GPatriota.github.io/gitfind/static/css/main.7f9b3993.css",
-    "main.js": "/GPatriota.github.io/gitfind/static/js/main.39b9f458.js",
+    "main.js": "/GPatriota.github.io/gitfind/static/js/main.4fb13498.js",
     "static/media/background.png": "/GPatriota.github.io/gitfind/static/media/background.e69937bafde1c0a1e1bd.png",
     "index.html": "/GPatriota.github.io/gitfind/index.html",
     "main.7f9b3993.css.map": "/GPatriota.github.io/gitfind/static/css/main.7f9b3993.css.map",
-    "main.39b9f458.js.map": "/GPatriota.github.io/gitfind/static/js/main.39b9f458.js.map"
+    "main.4fb13498.js.map": "/GPatriota.github.io/gitfind/static/js/main.4fb13498.js.map"
   },
   "entrypoints": [
     "static/css/main.7f9b3993.css",
-    "static/js/main.39b9f458.js"
+    "static/js/main.4fb13498.js"
   ]
 }
