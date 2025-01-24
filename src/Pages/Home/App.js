@@ -5,6 +5,7 @@ import ItemList from "../../components/ItemList";
 import "./styles.css";
 
 function App() {//teste
+  console.log("dale");
   const [user, setUser] = useState("");
   const [currentUser, setCurrentUser] = useState(null);
   const [repos, setRepos] = useState(null);
