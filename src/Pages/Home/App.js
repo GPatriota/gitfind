@@ -4,8 +4,7 @@ import background from "../../assets/background.png";
 import ItemList from "../../components/ItemList";
 import "./styles.css";
 
-function App() {//teste
-  console.log("dale");
+function App() {
   const [user, setUser] = useState("");
   const [currentUser, setCurrentUser] = useState(null);
   const [repos, setRepos] = useState(null);
@@ -20,8 +19,7 @@ function App() {//teste
 
       const reposData = await fetch(`https://api.github.com/users/${user}/repos`);
       const newRepos = await reposData.json();
-      console.log(repos);
-      if(newRepos.length){
+      if (newRepos.length) {
         setRepos(newRepos);
       }
     }
@@ -42,30 +40,30 @@ function App() {//teste
             />
             <button onClick={handleGetData}>Buscar</button>
           </div>
-          {currentUser?.login ? (<>
-            <div className="profile">
-            <img
-              src={currentUser.avatar_url}
-              alt="imagem de perfil"
-              className="profileimg"
-            />
+          {currentUser?.login ? (
+            <>
+              <div className="profile">
+                <img
+                  src={currentUser.avatar_url}
+                  alt="imagem de perfil"
+                  className="profileimg"
+                />
+                <div>
+                  <h3>{currentUser.login}</h3>
+                  <p>{currentUser.bio}</p>
+                </div>
+              </div>
+              <hr />
+            </>
+          ) : null}
+          {repos?.length ? (
             <div>
-              <h3>{currentUser.login}</h3>
-              <p>{currentUser.bio}</p>
+              <h4 className="repositorie"> Repositórios </h4>
+              {repos.map((repo) => (
+                <ItemList key={repo.id} title={repo.name} description={repo.description} />
+              ))}
             </div>
-          </div>
-          <hr />
-          </>): null}
-          {repos?.length ? (<>
-            <div>
-            <h4 className="repositorie"> Repositórios </h4>
-            {repos.map(repo=>(
-              <ItemList title={repo.name} description={repo.description} />
-            )
-            )}
-            
-          </div>
-          </>): null}
+          ) : null}
         </div>
       </div>
     </div>

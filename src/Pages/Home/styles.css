@@ -1,85 +1,157 @@
-*{
+* {
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .conteudo {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column; /* Permite que o layout fique em coluna no celular */
+  padding: 20px;
+}
+
+.background {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  opacity: 0.04;
+}
+
+.info {
+  width: 100%;
+  color: #ffff;
+  z-index: 10; /* Garante que o conteúdo fique acima da imagem de fundo */
+}
+
+input {
+  border: 1px solid #999999;
+  border-radius: 22px;
+  min-width: 250px;
+  width: 100%; /* Ajusta o input para ocupar toda a largura disponível */
+  margin-bottom: 12px;
+  background: transparent;
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+}
+
+button {
+  border: 1px solid #999999;
+  border-radius: 22px;
+  background: #2D333B;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%; /* Ajusta o botão para ocupar toda a largura disponível */
+}
+
+button:hover {
+  background-color: #1a2125; /* Adiciona um efeito de hover */
+}
+
+.profile {
+  display: flex;
+  margin: 40px 0;
+  flex-direction: column; /* Empilha os itens no celular */
+  align-items: center; /* Centraliza os itens no celular */
+}
+
+.profileimg {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  border: 2px solid #E5E5E5;
+}
+
+.profile h3 {
+  color: #999999;
+  font-size: 24px;
+  margin: 0;
+}
+
+.profile p {
+  color: #999999;
+  font-size: 12px;
+  margin: 20px 0 0 0;
+  text-align: center; /* Centraliza a bio no celular */
+}
+
+.repositorie {
+  font-size: 32px;
+  color: #FFFFFF;
+  margin: 12px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .conteudo {
+    padding: 10px; /* Adiciona padding para telas menores */
   }
-  
-  .background {
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    opacity: 0.04;
-  }
-  
+
   .info {
-    width: 60%;
-    margin-right: 90px;
-    margin-top: 40px;
-    color: #ffff
-  }
-
-  input {
-    border: 1px solid #999999;
-    border-radius: 22px;
-    min-width: 250px;
-    width: 85%;
-    margin-right: 12px;
-    background: transparent;
-    font-size: 18px;
-    padding: 10px;
-    color: white;
-  }
-
-  button {
-    border: 1px solid #999999;
-    border-radius: 22px;
-    margin-right: 12px;
-    background: #2D333B;
-    color: #FFFFFF;
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
+    margin-right: 0;
+    margin-top: 20px;
   }
 
   .profile {
-    display: flex;
-    margin: 40px 0;
-  }
-  
-  .profileimg {
-    width: 120px;
-    height: 120px;
-    border-radius: 60px;
-    border: 2px solid #E5E5E5;
-  }
-  
-  .profile h3 {
-    color: #999999;
-    font-size: 24px;
-    margin: 0;
+    margin-top: 20px;
   }
 
-  .profile span {
-    display: block;
-    color: #999999;
-    font-size: 12px;
-    margin: 0;
+  input, button {
+    width: 100%; /* Ajusta a largura dos inputs e botão para 100% no celular */
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .profile img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile h3 {
+    font-size: 20px;
   }
 
   .profile p {
-    color: #999999;
-    font-size: 12px;
-    margin: 20px 0 0 0;
+    font-size: 14px;
   }
 
   .repositorie {
-    font-size: 32px;
-    color: #FFFFFF;
-    margin: 12px 0;
-    text-align: center;
+    font-size: 24px; /* Reduz o tamanho da fonte dos repositórios no celular */
   }
+}
+
+@media (max-width: 480px) {
+  .profile img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile h3 {
+    font-size: 18px;
+  }
+
+  .profile p {
+    font-size: 12px;
+  }
+
+  .repositorie {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 16px; /* Ajusta o tamanho da fonte do botão em telas pequenas */
+  }
+
+  input {
+    font-size: 16px; /* Ajusta o tamanho da fonte no input */
+  }
+}
