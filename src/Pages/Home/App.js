@@ -50,10 +50,6 @@ function App() {//teste
             />
             <div>
               <h3>{currentUser.login}</h3>
-<<<<<<< HEAD
-            
-=======
->>>>>>> 9509468218a39608975f15247db8c11b85cbabf7
               <p>{currentUser.bio}</p>
             </div>
           </div>
