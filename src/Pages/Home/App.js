@@ -4,7 +4,7 @@ import background from "../../assets/background.png";
 import ItemList from "../../components/ItemList";
 import "./styles.css";
 
-function App() {
+function App() {//teste
   const [user, setUser] = useState("");
   const [currentUser, setCurrentUser] = useState(null);
   const [repos, setRepos] = useState(null);
@@ -50,7 +50,10 @@ function App() {
             />
             <div>
               <h3>{currentUser.login}</h3>
+<<<<<<< HEAD
             
+=======
+>>>>>>> 9509468218a39608975f15247db8c11b85cbabf7
               <p>{currentUser.bio}</p>
             </div>
           </div>
