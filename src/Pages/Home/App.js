@@ -36,7 +36,7 @@ function App() {
               name="user"
               value={user}
               onChange={(event) => setUser(event.target.value)}
-              placeholder="@username"
+              placeholder="@username do github"
             />
             <button onClick={handleGetData}>Buscar</button>
           </div>
